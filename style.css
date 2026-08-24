@@ -169,3 +169,25 @@ footer {
     gap: 8px;
   }
 }
+.map-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.map-button {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-family: inherit;
+  letter-spacing: 1px;
+  border: 1px solid #444;
+  transition: all 0.2s ease;
+}
+
+.map-button:hover {
+  background: white;
+  color: #111;
+  transform: translateY(-2px);
+}
