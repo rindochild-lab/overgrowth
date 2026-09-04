@@ -6,18 +6,74 @@
 
     <title>Coalesce — Overgrowth</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="coalesce.css">
 </head>
 
 <body>
 
     <nav class="menu">
         <a href="index.html">Overgrowth</a>
-        <a href="coalesce.html">Coalesce</a>
+        <a href="coalesce.html" class="active">Coalesce</a>
     </nav>
 
-    <main class="page">
-        <h1>Coalesce</h1>
+    <main class="coalesce-page">
+
+        <header class="title">
+            <h1>Coalesce</h1>
+            <p>one image becoming many becoming one</p>
+        </header>
+
+        <section class="canvas-container">
+            <canvas id="coalesceCanvas"></canvas>
+
+            <div class="start-message" id="startMessage">
+                <span>CLICK TO BEGIN</span>
+            </div>
+        </section>
+
+        <section class="controls">
+
+            <div class="control-group">
+                <label for="layers">
+                    LAYERS
+                    <span id="layersValue">5</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="layers"
+                    min="1"
+                    max="12"
+                    value="5"
+                >
+            </div>
+
+            <div class="control-group">
+                <label for="intensity">
+                    MOVEMENT
+                    <span id="intensityValue">50</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="intensity"
+                    min="0"
+                    max="100"
+                    value="50"
+                >
+            </div>
+
+            <div class="mode-buttons">
+                <button class="mode active" data-mode="normal">NORMAL</button>
+                <button class="mode" data-mode="ghost">GHOST</button>
+                <button class="mode" data-mode="invert">INVERT</button>
+            </div>
+
+        </section>
+
+        <p class="instructions">
+            Move your pointer across the image. Click the image to play or pause.
+        </p>
 
         <p>
             Learn to coalesce.
@@ -31,6 +87,8 @@
         <p>exhausted but undaunted
         </p>
     </main>
+
+    <script src="coalesce.js"></script>
 
 </body>
 </html>
